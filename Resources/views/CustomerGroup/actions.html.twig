@@ -1,0 +1,195 @@
+{% extends 'HeadooEcommerceBundle::base.html.twig' %}
+
+{% block hecommerce_content %}
+
+    {% if app.request.attributes.get('_route') == 'hecommerce_management_customergroup_new' %}
+
+        {{ form(form) }}
+
+        <a class="btn btn-default" href="{{ path('hecommerce_management_customergroup') }}">
+            {{ 'hecommerce.management.back'|trans({}, 'management') }}
+        </a>
+
+    {% elseif app.request.attributes.get('_route') == 'hecommerce_management_customergroup_show' %}
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>{{ 'hecommerce.management.id'|trans({}, 'management') }}</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'hecommerce.management.name'|trans({}, 'management') }}</th>
+                <td>{{ entity.name }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-sm-4 text-left">
+                <h4>{{ 'hecommerce.management.relatedservices'|trans({}, 'management') }}</h4>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{{ 'hecommerce.management.id'|trans({}, 'management') }}</th>
+                    <th>{{ 'hecommerce.management.name'|trans({}, 'management') }}</th>
+                    <th>{{ 'hecommerce.management.description'|trans({}, 'management') }}</th>
+                    <th>{{ 'hecommerce.management.price'|trans({}, 'management') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for service in entity.getServices %}
+                    <tr>
+                        <td><a href="{{ path('hecommerce_management_service_show', { 'id': entity.id }) }}">{{ service.id }}</a></td>
+                        <td>{{ service.translate(app.request.locale).getName }}</td>
+                        <td>{{ service.translate(app.request.locale).getDescription }}</td>
+                        <td>{{ service.price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-sm-4 text-left">
+                <a class="btn btn-default"  href="{{ path('hecommerce_management_customergroup') }}">
+                    {{ 'hecommerce.management.back'|trans({}, 'management') }}
+                </a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a class="btn btn-default"  href="{{ path('hecommerce_management_customergroup_edit', { 'id': entity.id }) }}">
+                    {{ 'hecommerce.management.edit'|trans({}, 'management') }}
+                </a>
+            </div>
+            <div class="col-sm-4 text-right">
+                {{ form_start(delete_form) }}
+                {{ form_widget(delete_form.submit, { 'attr': {'class': 'btn btn-danger', 'type': 'button'} }) }}
+                {{ form_end(delete_form) }}
+            </div>
+        </div>
+
+    {% elseif app.request.attributes.get('_route') == 'hecommerce_management_customergroup_edit' %}
+
+        {{ form(edit_form) }}
+
+        <div class="row">
+            <div class="col-sm-4 text-left">
+                <a class="btn btn-default"  href="{{ path('hecommerce_management_customergroup') }}">
+                    {{ 'hecommerce.management.back'|trans({}, 'management') }}
+                </a>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4 text-right">
+                {{ form_start(delete_form) }}
+                {{ form_widget(delete_form.submit, { 'attr': {'class': 'btn btn-danger', 'type': 'button'} }) }}
+                {{ form_end(delete_form) }}
+            </div>
+        </div>
+
+    {% endif %}
+
+{% endblock hecommerce_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        jQuery(document).ready(function() {
+            // Get the ul that holds the collection of tags
+            $collectionHolder = $('ul.tags');
+
+            // add a delete link to all of the existing tag form li elements
+            $collectionHolder.find('li').each(function() {
+                addTagFormDeleteLink($(this));
+            });
+
+            // ... the rest of the block from above
+        });
+
+        function addTagForm() {
+            // ...
+
+            // add a delete link to the new form
+            addTagFormDeleteLink($newFormLi);
+        }
+
+        function addTagFormDeleteLink($tagFormLi) {
+            var $removeFormA = $('<a href="#">delete this tag</a>');
+            $tagFormLi.append($removeFormA);
+
+            $removeFormA.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // remove the li for the tag form
+                $tagFormLi.remove();
+            });
+        }
+
+        /*var $collectionHolder;
+
+        // setup an "add a tag" link
+        var $addServiceLink = $('<a href="#" class="add_service_link">Add a service</a>');
+        var $newLinkLi = $('<li></li>').append($addServiceLink);
+
+        jQuery(document).ready(function() {
+        // Get the ul that holds the collection of tags
+        $collectionHolder = $('ul.services');
+
+        // add the "add a tag" anchor and li to the tags ul
+        $collectionHolder.append($newLinkLi);
+
+        // add a delete link to all of the existing tag form li elements
+        /*$collectionHolder.find('li').each(function() {
+            addServiceFormDeleteLink($(this));
+        });*/
+
+        // count the current form inputs we have (e.g. 2), use that as the new
+        // index when inserting a new item (e.g. 2)
+        /*$collectionHolder.data('index', $collectionHolder.find(':input').length);
+
+            $addServiceLink.on('click', function(e) {
+            // prevent the link from creating a "#" on the URL
+            e.preventDefault();
+
+            // add a new tag form (see next code block)
+            addServiceForm($collectionHolder, $newLinkLi);
+            });
+        });*/
+
+        /*function addServiceForm($collectionHolder, $newLinkLi) {
+            // Get the data-prototype explained earlier
+            var prototype = $collectionHolder.data('prototype');
+
+            // get the new index
+            var index = $collectionHolder.data('index');
+
+            // Replace '__name__' in the prototype's HTML to
+            // instead be a number based on how many items we have
+            var newForm = prototype.replace(/__name__/g, index);
+
+            // increase the index with one for the next item
+            $collectionHolder.data('index', index + 1);
+
+            // Display the form in the page in an li, before the "Add a tag" link li
+            var $newFormLi = $('<li></li>').append(newForm);
+            $newLinkLi.before($newFormLi);
+
+            // add a delete link to the new form
+            //addServiceFormDeleteLink($newFormLi);
+        }*/
+
+        /*function addServiceFormDeleteLink($serviceFormLi) {
+            var $removeFormA = $('<a href="#">delete this service</a>');
+            $serviceFormLi.append($removeFormA);
+
+            $removeFormA.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // remove the li for the tag form
+                $serviceFormLi.remove();
+            });
+        }*/
+    </script>
+{% endblock %}
