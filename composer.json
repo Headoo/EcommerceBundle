@@ -16,19 +16,25 @@
   "require" : {
     "php": ">=5.3.3",
     "symfony/symfony": "2.6.*",
-    "doctrine/doctrine-bundle": "~1.2",
+    "doctrine/doctrine-bundle": "~1.2"
   },
-  "autoload" : {
-    "psr-0" : {
-      "Headoo\\EcommerceBundle" : ""
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "headoo/ecommerce-bundle",
+        "version": "dev-master",
+        "source": {
+          "url": "https://github.com/Headoo/HeadooEcommerceBundle",
+          "type": "git",
+          "reference": "master"
+        },
+        "autoload": {
+          "psr-0" : {
+            "Headoo\\EcommerceBundle" : "src"
+          }
+        }
+      }
     }
-  },
-  "target-dir" : "Headoo/EcommerceBundle",
-  "repositories" : [{
-  }],
-  "extra" : {
-    "branch-alias" : {
-      "dev-master" : "1.0"
-    }
-  }
+  ]
 }
