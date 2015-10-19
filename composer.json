@@ -1,0 +1,34 @@
+{
+  "name" : "headoo/ecommerce-bundle",
+  "description" : "A bundle to sell services online in a backoffice.",
+  "homepage" : "https://github.com/Headoo/HeadooEcommerceBundle",
+  "type" : "symfony-bundle",
+  "authors" : [{
+    "name" : "Ana Luiza Cicconi",
+    "email" : "analuizacicconi@gmail.com"
+  }],
+  "keywords" : [
+    "ecommerce bundle"
+  ],
+  "license" : [
+    "MIT"
+  ],
+  "require" : {
+    "php": ">=5.3.3",
+    "symfony/symfony": "2.6.*",
+    "doctrine/doctrine-bundle": "~1.2",
+  },
+  "autoload" : {
+    "psr-0" : {
+      "Headoo\\EcommerceBundle" : ""
+    }
+  },
+  "target-dir" : "Headoo/EcommerceBundle",
+  "repositories" : [{
+  }],
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "1.0"
+    }
+  }
+}
