@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Handler;
+namespace Headoo\EcommerceBundle\Handler;
 
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Translation\DataCollectorTranslator;

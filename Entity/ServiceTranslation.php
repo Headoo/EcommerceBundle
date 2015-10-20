@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;

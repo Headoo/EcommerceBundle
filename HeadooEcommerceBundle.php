@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle;
+namespace Headoo\EcommerceBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

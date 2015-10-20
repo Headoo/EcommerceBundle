@@ -1,17 +1,17 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
-use EcommerceBundle\Entity\Service;
+use Headoo\EcommerceBundle\Entity\Service;
 
 /**
  * CustomerGroup
  *
  * @ORM\Table(name="headoo_ecommerce_customer_group")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\CustomerGroupRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\CustomerGroupRepository")
  */
 class CustomerGroup
 {

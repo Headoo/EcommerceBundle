@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * ServiceRange
  *
  * @ORM\Table(name="headoo_ecommerce_servicerange")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\ServiceRangeRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\ServiceRangeRepository")
  */
 class ServiceRange 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Model;
+namespace Headoo\EcommerceBundle\Model;
 
 use Doctrine\ORM\EntityManager;
 

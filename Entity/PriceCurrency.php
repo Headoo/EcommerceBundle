@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * PriceCurrency
  *
  * @ORM\Table(name="headoo_ecommerce_price_currency")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\PriceCurrencyRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\PriceCurrencyRepository")
  */
 class PriceCurrency 
 {

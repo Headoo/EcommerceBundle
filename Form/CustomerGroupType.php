@@ -1,11 +1,11 @@
 <?php
 
-namespace EcommerceBundle\Form;
+namespace Headoo\EcommerceBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use EcommerceBundle\Form\ServiceType;
+use Headoo\EcommerceBundle\Form\ServiceType;
 
 class CustomerGroupType extends AbstractType
 {

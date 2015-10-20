@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 /**
  * ServiceRepository
@@ -18,7 +18,7 @@ class ServiceRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this->getEntityManager()->createQueryBuilder();
 
         return $qb ->select('s')
-            ->from('EcommerceBundle\Entity\Service','s')
+            ->from('Headoo\EcommerceBundle\Entity\Service','s')
             ->where('s.customerGroup = :customerGroup')
             ->andwhere('s.priceCurrency = :priceCurrency')
             ->setParameters(array(

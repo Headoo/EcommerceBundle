@@ -2,14 +2,14 @@
 
 hecommerce_management_service:
     path:     /{_locale}/service
-    defaults: { _controller: "HeadooEcommerceBundle:Service:index" }
+    defaults: { _controller: HeadooEcommerceBundle:Service:index }
     methods:  GET
     requirements:
         _locale: "%hecommerce.routing.locales%"
 
 hecommerce_management_service_show:
     path:     /{_locale}/service/{id}/show
-    defaults: { _controller: "HeadooEcommerceBundle:Service:show" }
+    defaults: { _controller: HeadooEcommerceBundle:Service:show }
     methods:  GET
     requirements:
         id:  \d+
@@ -17,21 +17,21 @@ hecommerce_management_service_show:
 
 hecommerce_management_service_new:
     path:     /{_locale}/service/new
-    defaults: { _controller: "HeadooEcommerceBundle:Service:new" }
+    defaults: { _controller: HeadooEcommerceBundle:Service:new }
     methods:  GET
     requirements:
         _locale: "%hecommerce.routing.locales%"
 
 hecommerce_management_service_create:
     path:     /{_locale}/service/create
-    defaults: { _controller: "HeadooEcommerceBundle:Service:create" }
+    defaults: { _controller: HeadooEcommerceBundle:Service:create }
     methods:  POST
     requirements:
         _locale: "%hecommerce.routing.locales%"
 
 hecommerce_management_service_edit:
     path:     /{_locale}/service/{id}/edit
-    defaults: { _controller: "HeadooEcommerceBundle:Service:edit" }
+    defaults: { _controller: HeadooEcommerceBundle:Service:edit }
     methods:  GET
     requirements:
         id:  \d+
@@ -39,7 +39,7 @@ hecommerce_management_service_edit:
 
 hecommerce_management_service_update:
     path:     /{_locale}/service/{id}/update
-    defaults: { _controller: "HeadooEcommerceBundle:Service:update" }
+    defaults: { _controller: HeadooEcommerceBundle:Service:update }
     methods:  [POST, PUT]
     requirements:
         id:  \d+
@@ -47,7 +47,7 @@ hecommerce_management_service_update:
         
 hecommerce_management_service_delete:
     path:     /{_locale}/service/{id}/delete
-    defaults: { _controller: "HeadooEcommerceBundle:Service:delete" }
+    defaults: { _controller: HeadooEcommerceBundle:Service:delete }
     methods:  [POST, DELETE]
     requirements:
         id:  \d+

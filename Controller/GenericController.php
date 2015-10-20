@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Controller;
+namespace Headoo\EcommerceBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

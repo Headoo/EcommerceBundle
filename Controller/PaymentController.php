@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Controller;
+namespace Headoo\EcommerceBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -25,7 +25,7 @@ class PaymentController extends Controller
     {
         $gatewayName = 'stripe';
 
-        $storage = $this->get('payum')->getStorage('EcommerceBundle\Entity\Payment');
+        $storage = $this->get('payum')->getStorage('Headoo\EcommerceBundle\Entity\Payment');
         
         $order = $this->get('hecommerce.order.manager')->loadOrderForConnectedUser();
         
@@ -127,7 +127,7 @@ class PaymentController extends Controller
     {
         $gatewayName = 'offline';
 
-        $storage = $this->get('payum')->getStorage('EcommerceBundle\Entity\Payment');
+        $storage = $this->get('payum')->getStorage('Headoo\EcommerceBundle\Entity\Payment');
 
         $order = $this->get('hecommerce.order.manager')->loadOrderForConnectedUser();
         

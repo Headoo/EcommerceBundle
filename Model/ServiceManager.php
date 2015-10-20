@@ -1,8 +1,8 @@
 <?php
     
-namespace EcommerceBundle\Model;
+namespace Headoo\EcommerceBundle\Model;
 
-use EcommerceBundle\Model\BaseManager;
+use Headoo\EcommerceBundle\Model\BaseManager;
 use Doctrine\ORM\EntityManager;
 
 class ServiceManager extends BaseManager

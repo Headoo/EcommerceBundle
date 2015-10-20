@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\EventListener;
+namespace Headoo\EcommerceBundle\EventListener;
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;

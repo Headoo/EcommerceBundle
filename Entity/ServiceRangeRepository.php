@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 /**
  * ServiceRangeRepository

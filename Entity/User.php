@@ -1,12 +1,12 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use EcommerceBundle\Entity\CustomerGroup;
-use EcommerceBundle\Entity\PriceCurrency;
+use Headoo\EcommerceBundle\Entity\CustomerGroup;
+use Headoo\EcommerceBundle\Entity\PriceCurrency;
 
 /**
  * User
@@ -14,7 +14,7 @@ use EcommerceBundle\Entity\PriceCurrency;
  * This class extends the FOSUserBundle User class
  *
  * @ORM\Table(name="headoo_ecommerce_user")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\UserRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\UserRepository")
  */
 class User extends BaseUser
 {

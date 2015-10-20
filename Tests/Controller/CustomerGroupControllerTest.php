@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Tests\Controller;
+namespace Headoo\EcommerceBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

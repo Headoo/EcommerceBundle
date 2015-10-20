@@ -1,10 +1,10 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
-use EcommerceBundle\Entity\ServiceRange;
-use EcommerceBundle\Entity\CustomerGroup;
-use EcommerceBundle\Entity\PriceCurrency;
+use Headoo\EcommerceBundle\Entity\ServiceRange;
+use Headoo\EcommerceBundle\Entity\CustomerGroup;
+use Headoo\EcommerceBundle\Entity\PriceCurrency;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
@@ -13,7 +13,7 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
  * Service
  *
  * @ORM\Table(name="headoo_ecommerce_service")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\ServiceRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\ServiceRepository")
  */
 class Service
 {

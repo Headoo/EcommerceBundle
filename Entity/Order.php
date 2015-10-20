@@ -1,11 +1,11 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
-use EcommerceBundle\Entity\PaymentMethod;
-use EcommerceBundle\Entity\Payment;
-use EcommerceBundle\Entity\OrderedItem;
-use EcommerceBundle\Entity\User;
+use Headoo\EcommerceBundle\Entity\PaymentMethod;
+use Headoo\EcommerceBundle\Entity\Payment;
+use Headoo\EcommerceBundle\Entity\OrderedItem;
+use Headoo\EcommerceBundle\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -13,7 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * Order
  *
  * @ORM\Table(name="headoo_ecommerce_order")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\OrderRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\OrderRepository")
  */
 class Order 
 {

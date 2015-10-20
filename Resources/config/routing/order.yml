@@ -17,7 +17,7 @@ hecommerce_management_order_show:
 
 hecommerce_management_order_delete:
     path: /{_locale}/order/{id}
-    defaults:  { _controller: "HeadooEcommerceBundle:Order:delete" }
+    defaults:  { _controller: HeadooEcommerceBundle:Order:delete }
     methods: [POST, DELETE]
     requirements:
         id:  \d+

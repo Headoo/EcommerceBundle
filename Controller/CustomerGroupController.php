@@ -1,10 +1,10 @@
 <?php
 
-namespace EcommerceBundle\Controller;
+namespace Headoo\EcommerceBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Collections\ArrayCollection;
-use EcommerceBundle\Controller\GenericController;
+use Headoo\EcommerceBundle\Controller\GenericController;
 
 /**
  * CustomerGroup controller.

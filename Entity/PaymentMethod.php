@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * PaymentMethod
  *
  * @ORM\Table(name="headoo_ecommerce_paymentmethod")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\PaymentMethodRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\PaymentMethodRepository")
  */
 class PaymentMethod 
 {

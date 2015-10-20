@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\EventListener;
+namespace Headoo\EcommerceBundle\EventListener;
 
 use FOS\UserBundle\FOSUserEvents;
 use FOS\UserBundle\Event\FormEvent;

@@ -1,8 +1,8 @@
 <?php
 
-namespace EcommerceBundle\Controller;
+namespace Headoo\EcommerceBundle\Controller;
 
-use EcommerceBundle\Controller\GenericController;
+use Headoo\EcommerceBundle\Controller\GenericController;
 
 /**
  * ServiceRange controller.

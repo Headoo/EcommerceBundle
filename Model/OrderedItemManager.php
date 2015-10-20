@@ -1,8 +1,8 @@
 <?php
     
-namespace EcommerceBundle\Model;
+namespace Headoo\EcommerceBundle\Model;
 
-use EcommerceBundle\Model\BaseManager;
+use Headoo\EcommerceBundle\Model\BaseManager;
 
 class OrderedItemManager extends BaseManager
 {

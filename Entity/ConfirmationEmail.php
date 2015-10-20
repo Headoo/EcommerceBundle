@@ -1,15 +1,15 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
-use EcommerceBundle\Entity\Order;
+use Headoo\EcommerceBundle\Entity\Order;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Confirmation Email
  *
  * @ORM\Table(name="headoo_ecommerce_confirmationemail")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\ConfirmationEmailRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\ConfirmationEmailRepository")
  */
 class ConfirmationEmail 
 {

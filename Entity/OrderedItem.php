@@ -1,16 +1,16 @@
 <?php
 
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
-use EcommerceBundle\Entity\Service;
-use EcommerceBundle\Entity\Order;
+use Headoo\EcommerceBundle\Entity\Service;
+use Headoo\EcommerceBundle\Entity\Order;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * OrderedItem
  *
  * @ORM\Table(name="headoo_ecommerce_ordereditem")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Entity\OrderedItemRepository")
+ * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\OrderedItemRepository")
  */
 class OrderedItem 
 {

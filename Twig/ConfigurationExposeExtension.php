@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommerceBundle\Twig;
+namespace Headoo\EcommerceBundle\Twig;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

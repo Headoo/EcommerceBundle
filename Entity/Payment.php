@@ -1,5 +1,5 @@
 <?php
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 use Payum\Core\Model\Payment as BasePayment;
 use Doctrine\ORM\Mapping as ORM;

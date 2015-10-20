@@ -1,5 +1,5 @@
 <?php
-namespace EcommerceBundle\Entity;
+namespace Headoo\EcommerceBundle\Entity;
 
 use Payum\Core\Model\Token;
 use Doctrine\ORM\Mapping as ORM;
