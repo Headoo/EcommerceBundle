@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "symfony/framework-bundle": "2.7.*",
+        "symfony/framework-bundle": "2.6.*",
         "twig/extensions": "1.2.*",
         "payum/offline": "0.15.*@dev",
         "payum/stripe": "0.15.*@dev",
