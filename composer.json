@@ -1,1 +1,28 @@
-
+{
+    "name": "headoo/ecommerce-bundle",
+    "type": "symfony-bundle",
+    "description": "Ecommerce Bundle",
+    "homepage": "https://github.com/Headoo/EcommerceBundle",
+    "keywords": ["ecommerce", "services", "backoffice", "bundle"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ana Luiza Cicconi",
+            "homepage": "http://headoo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/framework-bundle": "2.7.*",
+        "twig/extensions": "1.2.*",
+        "payum/offline": "0.15.*@dev",
+        "payum/stripe": "0.15.*@dev",
+        "payum/payum-bundle": "0.15.*@dev",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "knplabs/doctrine-behaviors": "~1.1@dev",
+        "a2lix/translation-form-bundle": "2.*@dev"
+    },
+    "autoload": {
+        "psr-4": {"Headoo\\EcommerceBundle\\": ""}
+    }
+}
