@@ -1,7 +1,7 @@
 {
     "name": "headoo/ecommerce-bundle",
     "type": "symfony-bundle",
-    "description": "Ecommerce Bundle",
+    "description": "A bundle to sell services online in a backoffice",
     "homepage": "https://github.com/Headoo/EcommerceBundle",
     "keywords": ["ecommerce", "services", "backoffice", "bundle"],
     "license": "MIT",
