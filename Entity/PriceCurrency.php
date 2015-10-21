@@ -4,6 +4,7 @@ namespace Headoo\EcommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Headoo\EcommerceBundle\Model\PriceCurrencyInterface;
 
 /**
  * PriceCurrency
@@ -11,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="headoo_ecommerce_price_currency")
  * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\PriceCurrencyRepository")
  */
-class PriceCurrency 
+class PriceCurrency implements PriceCurrencyInterface
 {
     /**
      * @var integer
@@ -32,9 +33,7 @@ class PriceCurrency
     protected $code;
 
     /**
-     * Get id
-     *
-     * @return integer
+     * {@inheritDoc}
      */
     public function getId()
     {
@@ -42,11 +41,7 @@ class PriceCurrency
     }
 
     /**
-     * Set code
-     *
-     * @param string $code
-     *
-     * @return PriceCurrency
+     * {@inheritDoc}
      */
     public function setCode($code)
     {
@@ -56,9 +51,7 @@ class PriceCurrency
     }
 
     /**
-     * Get code
-     *
-     * @return string
+     * {@inheritDoc}
      */
     public function getCode()
     {

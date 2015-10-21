@@ -5,8 +5,6 @@ namespace Headoo\EcommerceBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Headoo\EcommerceBundle\Entity\CustomerGroup;
-use Headoo\EcommerceBundle\Entity\PriceCurrency;
 
 /**
  * User
@@ -141,7 +139,8 @@ class User extends BaseUser
     protected $language;
 
     /**
-     * @ORM\ManyToOne(targetEntity="PriceCurrency")
+     * @ORM\ManyToOne(targetEntity="Headoo\EcommerceBundle\Model\PriceCurrencyInterface")
+     * @var PriceCurrencyInterface
      * @ORM\JoinColumn(nullable=true)
      * @Assert\NotBlank(
      *      message="Please choose a price currency.",
@@ -151,7 +150,8 @@ class User extends BaseUser
     protected $priceCurrency;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CustomerGroup")
+     * @ORM\ManyToOne(targetEntity="Headoo\EcommerceBundle\Model\CustomerGroupInterface")
+     * @var CustomerGroupInterface
      * @ORM\JoinColumn(nullable=true)
      * @Assert\NotBlank(
      *      message="Please choose a customer group.",

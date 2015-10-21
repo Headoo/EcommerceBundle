@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Headoo\EcommerceBundle\Entity\Service;
+use Headoo\EcommerceBundle\Model\CustomerGroupInterface;
 
 /**
  * CustomerGroup
@@ -13,7 +14,7 @@ use Headoo\EcommerceBundle\Entity\Service;
  * @ORM\Table(name="headoo_ecommerce_customer_group")
  * @ORM\Entity(repositoryClass="Headoo\EcommerceBundle\Entity\CustomerGroupRepository")
  */
-class CustomerGroup
+class CustomerGroup implements CustomerGroupInterface
 {
     /**
      * @var integer
@@ -49,9 +50,7 @@ class CustomerGroup
     }
 
     /**
-     * Get id
-     *
-     * @return integer
+     * {@inheritDoc}
      */
     public function getId()
     {
@@ -59,11 +58,7 @@ class CustomerGroup
     }
 
     /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return CustomerGroup
+     * {@inheritDoc}
      */
     public function setName($name)
     {
@@ -73,9 +68,7 @@ class CustomerGroup
     }
 
     /**
-     * Get name
-     *
-     * @return string
+     * {@inheritDoc}
      */
     public function getName()
     {
@@ -83,9 +76,7 @@ class CustomerGroup
     }
 
     /**
-     * Get services
-     *
-     * @return string
+     * {@inheritDoc}
      */
     public function getServices()
     {
