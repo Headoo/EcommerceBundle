@@ -5,6 +5,8 @@ namespace Headoo\EcommerceBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Headoo\EcommerceBundle\Model\PriceCurrencyInterface;
+use Headoo\EcommerceBundle\Model\CustomerGroupInterface;
 
 /**
  * User
