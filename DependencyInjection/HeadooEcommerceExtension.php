@@ -39,6 +39,39 @@ class HeadooEcommerceExtension extends Extension
 
     }
     
+    /**
+     * Allow an extension to prepend the extension configurations.
+     *
+     * @param ContainerBuilder $container
+     */
+    public function prepend(ContainerBuilder $container)
+    {
+        // get all Bundles
+        $bundles = $container->getParameter('kernel.bundles');
+        if (isset($bundles['DoctrineBundle'])) {
+            // Get configuration of our own bundle
+            $configs = $container->getExtensionConfig($this->getAlias());
+            $config = $this->processConfiguration(new Configuration(), $configs);
+
+            // Prepare for insertion
+            $forInsertion = array(
+                'orm' => array(
+                    'resolve_target_entities' => array(
+                        'Headoo\EcommerceBundle\Model\CustomerGroupInterface' => $config['customergroup']['entity'],
+                        'Headoo\EcommerceBundle\Model\PriceCurrencyInterface' => $config['pricecurrency']['entity']
+                    )
+                )
+            );
+            foreach ($container->getExtensions() as $name => $extension) {
+                switch ($name) {
+                    case 'doctrine':
+                        $container->prependExtensionConfig($name, $forInsertion);
+                        break;
+                }
+            }
+        }
+    }
+    
     public function getAlias()
     {
         return 'headoo_ecommerce';
