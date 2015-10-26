@@ -41,6 +41,8 @@ class HeadooEcommerceExtension extends Extension
     
     /**
      * Allow an extension to prepend the extension configurations.
+     * 
+     * Define automatically the resolve_target_entities 
      *
      * @param ContainerBuilder $container
      */
